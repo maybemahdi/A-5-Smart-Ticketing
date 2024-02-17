@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A-5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-[Raleway]">
+    <header class="mx-auto w-4/5 py-8">
+      <div class="navbar bg-base-100 justify-between items-center">
+        <div class="">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden -translate-x-7"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box text-[#424247] text-[18px] font-normal leading-normal"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="lg:w-full w-2/3 -translate-x-7 lg:translate-x-0">
+            <a
+              class="text-[#131318] text-2xl lg:text-4xl font-extrabold leading-normal"
+              href="#"
+              >P-Ticket</a
+            >
+          </div>
+        </div>
+        <div class="hidden lg:flex">
+          <ul
+            class="flex gap-4 menu menu-horizontal px-10 text-[#424247] text-[18px] font-normal leading-normal"
+          >
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="flex lg:gap-6 justify-end lg:justify-center items-center">
+          <div class="hidden lg:block text-[#89898B] text-base">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a
+            class="border border-[#1DD100] hover:bg-[#1cd1009d] cursor-pointer transition-ease-in duration-300 bg-[#1cd10041] w-full md:block py-[7px] lg:py-[8px] px-[16px] md:px-[24px] rounded-md text-[18px] lg:text-xl font-bold text-[#1DD100]"
+            >Bus
+            <img class="inline" src="./images/bus-icon.png" alt="">
+            </a
+          >
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
