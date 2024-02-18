@@ -1,624 +1,449 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A-5</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      .underline-custom {
-        text-decoration: underline;
-        text-decoration-color: #5e5e5f83;
-      }
-      .disabled {
-      opacity: 0.5; 
-      pointer-events: none; 
-}
 
-    </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Ticketing A-5</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    .underline-custom {
+      text-decoration: underline;
+      text-decoration-color: #5e5e5f83;
+    }
+
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
           },
         },
-      };
-    </script>
-  </head>
-  <body class="font-[Raleway]">
-    <header class="mx-auto w-4/5 py-8">
-      <div class="navbar bg-base-100 justify-between items-center">
-        <div class="">
-          <div class="dropdown">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost lg:hidden -translate-x-7"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box text-[#424247] text-[18px] font-normal leading-normal"
-            >
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Destination</a></li>
-              <li><a>Search</a></li>
-            </ul>
+      },
+    };
+  </script>
+</head>
+
+<body class="font-[Raleway]">
+  <header class="mx-auto w-4/5 py-8">
+    <div class="navbar bg-base-100 justify-between items-center">
+      <div class="">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden -translate-x-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </div>
-          <div class="lg:w-full w-2/3 -translate-x-7 lg:translate-x-0">
-            <a
-              class="text-[#131318] text-2xl lg:text-4xl font-extrabold leading-normal"
-              href="#"
-              >P-Ticket</a
-            >
-          </div>
-        </div>
-        <div class="hidden lg:flex">
-          <ul
-            class="flex gap-4 menu menu-horizontal px-10 text-[#424247] text-[18px] font-normal leading-normal"
-          >
+          <ul tabindex="0"
+            class="menu menu-md dropdown-content -ml-[10px] mt-3 p-2 shadow bg-base-100 rounded-box text-[#424247] text-[18px] font-normal leading-normal">
             <li><a>Home</a></li>
             <li><a>About</a></li>
             <li><a>Destination</a></li>
             <li><a>Search</a></li>
           </ul>
         </div>
-        <div class="flex lg:gap-6 justify-end lg:justify-center items-center">
-          <div class="hidden lg:block text-[#89898B] text-base">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <button
-            class="border border-[#1DD100] hover:bg-[#1cd1009d] cursor-pointer transition-ease-in duration-300 bg-[#1cd10041] w-full md:block py-[7px] lg:py-[8px] px-[16px] md:px-[24px] rounded-md text-[18px] lg:text-xl font-bold text-[#1DD100]"
-          >
-            Bus
-            <img class="inline" src="./images/bus-icon.png" alt="" />
-          </button>
+        <div class="lg:w-full w-2/3 -translate-x-7 lg:translate-x-0">
+          <a class="text-[#131318] text-2xl lg:text-4xl font-extrabold leading-normal" href="#">P-Ticket</a>
         </div>
       </div>
-      <!-- banner-section  -->
-      <section
-        class="bg-[url('./images/banner.png')] bg-cover bg-center py-20 rounded-3xl my-5"
-      >
-        <div class="container mx-auto px-4">
-          <div class="text-white text-center">
-            <h1 class="text-5xl font-bold mb-4">End-to-End Travel with</h1>
-            <h2 class="text-4xl lg:text-6xl font-bold text-[#1DD100] mb-6">
-              P Paribahan
-            </h2>
-            <p class="mb-8">
-              Book now for unbeatable prices and comfortable rides. Limited
-              seats available. Don't miss out, reserve your seat today!
-            </p>
-            <a href="#ticket-section"
-              id="buy-btn" 
-              class="inline-flex items-center justify-center whitespace-nowrap text-lg lg:mb-[40px] ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#1DD100] hover:bg-green-600 text-[#030712] font-bold py-[25px] px-[25px] rounded-lg"
-            >
-              Buy Tickets
-          </a>
-          </div>
-        </div>
-      </section>
-      <div
-        class="flex justify-center items-center font-[inter] my-8 lg:my-0 lg:relative bottom-[85px]"
-      >
-        <div class="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div
-            class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
-            data-v0-t="card"
-          >
-            <div class="flex items-center p-8 gap-4">
-              <img src="./images/people.png" alt="" />
-              <div>
-                <div class="text-2xl font-semibold">500K+</div>
-                <div class="text-sm text-gray-600">Registered users</div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
-            data-v0-t="card"
-          >
-            <div class="flex items-center p-8 gap-4">
-              <img src="./images/ticket-cupon.png" alt="" />
-              <div>
-                <div class="text-2xl font-semibold">1.7 lacks</div>
-                <div class="text-sm text-gray-600">Tickets sold</div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
-            data-v0-t="card"
-          >
-            <div class="flex items-center p-8 gap-4">
-              <img src="./images/stoppage.png" alt="" />
-              <div>
-                <div class="text-2xl font-semibold">80K+</div>
-                <div class="text-sm text-gray-600">Rental partners</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="hidden lg:flex">
+        <ul class="flex gap-4 menu menu-horizontal px-10 text-[#424247] text-[18px] font-normal leading-normal">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
       </div>
-    </header>
-    <main class="">
-      <section class="mx-auto w-4/5 mb-[40px]">
-        <h2
-          class="text-[#030712] text-[32px] lg:text-[40px] font-bold mb-[48px] text-center"
-        >
-          Best offers for you
-        </h2>
-        <div
-          class="flex gap-6 items-center flex-col lg:flex-row mb-8 lg:mb-[62px]"
-        >
-          <div
-            class="w-full bg-[#FFBF0F] rounded-3xl px-8 py-8 md:py-0 flex flex-col md:flex-row text-center justify-between items-center"
-          >
-            <div
-              class="space-y-1 font-[inter] py-4 border-b-2 border-dashed border-[#f0efef] md:border-0"
-            >
-              <h2 class="text-[28px] font-black text-black">15% OFF</h2>
-              <p class="text-black font-semibold text-[20px]">
-                on your next purchase
-              </p>
-              <p class="text-[#636262] font-medium text-[16px]">
-                use by January 2024
-              </p>
-            </div>
-            <div class="hidden md:block h-full">
-              <img class="h-full" src="./images/cupon-devider.png" alt="" />
-            </div>
-            <div class="lg:mr-[40px]">
-              <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
-                New15
-              </h3>
-              <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
-            </div>
-          </div>
-          <div
-            class="w-full bg-[#F78C9C] rounded-3xl px-8 py-8 md:py-0 flex flex-col md:flex-row text-center justify-between items-center"
-          >
-            <div
-              class="space-y-1 font-[inter] py-4 border-b-2 border-dashed border-[#f0efef] md:border-0"
-            >
-              <h2 class="text-[28px] font-black text-black">20% OFF</h2>
-              <p class="text-black font-semibold text-[20px]">
-                on your next purchase
-              </p>
-              <p class="text-[#636262] font-medium text-[16px]">
-                use by January 2024
-              </p>
-            </div>
-            <div class="hidden md:block h-full ml-[54px]">
-              <img class="h-full" src="./images/cupon-devider.png" alt="" />
-            </div>
-            <div class="">
-              <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
-                Couple20
-              </h3>
-              <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
-            </div>
-          </div>
+      <div class="flex lg:gap-6 justify-end lg:justify-center items-center">
+        <div class="hidden lg:block text-[#89898B] text-base">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <button
-          id="buy-btn"
-          class="mx-auto flex items-center justify-center whitespace-nowrap text-lg lg:mb-[40px] ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#41b12f00] border border-[#1DD100] hover:bg-[#1cd100d5] text-[#1DD100] hover:text-white font-bold py-[25px] px-[22px] rounded-lg"
-        >
-          See All Offers
+          class="border border-[#1DD100] hover:bg-[#1cd1009d] cursor-pointer transition-ease-in duration-300 bg-[#1cd10041] w-full md:block py-[7px] lg:py-[8px] px-[16px] md:px-[24px] rounded-md text-[18px] lg:text-xl font-bold text-[#1DD100]">
+          Bus
+          <img class="inline" src="./images/bus-icon.png" alt="" />
         </button>
-      </section>
-      <section id="ticket-section"
-        class="mt-20 bg-[#F7F8F8] border-t-[2px] border-[#1DD100] rounded-t-[88px] py-20"
-      >
-        <section class="mx-auto w-4/5">
-          <div class="flex flex-col gap-4 justify-center items-center mb-8">
-            <h2
-              class="text-center text-[#030712] text-[32px] lg:text-[40px] font-bold"
-            >
-              P.H Paribahan
-            </h2>
-            <p
-              class="md:w-3/4 font-[inter] text-[#03071299] font-normal text-[18px] text-center"
-            >
-              Travel hassle-free with our convenient bus ticket. Enjoy
-              affordable fares and reliable transportation. Book your journey
-              now!
+      </div>
+    </div>
+    <!-- banner-section  -->
+    <section class="bg-[url('./images/banner.png')] bg-cover bg-center py-20 rounded-3xl my-5">
+      <div class="container mx-auto px-4">
+        <div class="text-white text-center">
+          <h1 class="text-5xl font-bold mb-4">End-to-End Travel with</h1>
+          <h2 class="text-4xl lg:text-6xl font-bold text-[#1DD100] mb-6">
+            P Paribahan
+          </h2>
+          <p class="mb-8 w-3/4 mx-auto">
+            Book now for unbeatable prices and comfortable rides. Limited
+            seats available. Don't miss out, reserve your seat today! and reliable transportation options for passengers' journeys
+          </p>
+          <a href="#ticket-section" id="buy-btn"
+            class="inline-flex items-center justify-center whitespace-nowrap text-lg lg:mb-[40px] ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#1DD100] hover:bg-green-600 text-[#030712] font-bold py-[25px] px-[25px] rounded-lg">
+            Buy Tickets
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="flex justify-center items-center font-[inter] my-8 lg:my-0 lg:relative bottom-[85px]">
+      <div class="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
+          data-v0-t="card">
+          <div class="flex items-center p-8 gap-4">
+            <img src="./images/people.png" alt="" />
+            <div>
+              <div class="text-2xl font-semibold">500K+</div>
+              <div class="text-sm text-gray-600">Registered users</div>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
+          data-v0-t="card">
+          <div class="flex items-center p-8 gap-4">
+            <img src="./images/ticket-cupon.png" alt="" />
+            <div>
+              <div class="text-2xl font-semibold">1.7 lacks</div>
+              <div class="text-sm text-gray-600">Tickets sold</div>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-[3px] border-[#1DD100] text-card-foreground bg-white rounded-2xl shadow-lg overflow-hidden"
+          data-v0-t="card">
+          <div class="flex items-center p-8 gap-4">
+            <img src="./images/stoppage.png" alt="" />
+            <div>
+              <div class="text-2xl font-semibold">80K+</div>
+              <div class="text-sm text-gray-600">Rental partners</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="">
+    <section class="mx-auto w-4/5 mb-[40px]">
+      <h2 class="text-[#030712] text-[32px] lg:text-[40px] font-bold mb-[48px] text-center">
+        Best offers for you
+      </h2>
+      <div class="flex gap-6 items-center flex-col lg:flex-row mb-8 lg:mb-[62px]">
+        <div
+          class="w-full bg-[#FFBF0F] rounded-3xl px-8 py-8 md:py-0 flex flex-col md:flex-row text-center justify-between items-center">
+          <div class="space-y-1 font-[inter] py-4 border-b-2 border-dashed border-[#f0efef] md:border-0">
+            <h2 class="text-[28px] font-black text-black">15% OFF</h2>
+            <p class="text-black font-semibold text-[20px]">
+              on your next purchase
+            </p>
+            <p class="text-[#636262] font-medium text-[16px]">
+              use by January 2024
             </p>
           </div>
-          <div
-            class="flex flex-col lg:flex-row bg-white rounded-3xl p-6 lg:p-8 mb-6"
-          >
-            <div class="basis-[75%]">
-              <div class="flex flex-col lg:flex-row gap-4 justify-between mb-6">
-                <div class="flex flex-col lg:flex-row gap-[14px]">
-                  <img
-                    class="w-[68px] h-[48px]"
-                    src="./images/bus-logo.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col -mt-[10px]">
-                    <h2
-                      class="text-[#030712] text-[28px] lg:text-[32px] font-bold"
-                    >
-                      Greenline Paribahan
-                    </h2>
-                    <p
-                      class="text-[#03071299] font-normal font-[inter] text-base lg:text-[18px]"
-                    >
-                      Coach-009-WEB ! AC_Business
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    
-                    class="flex gap-2 transition-ease-in duration-300 bg-[#1cd10041] w-fit lg:w-full  py-[8px] lg:py-[10px] px-[16px] md:px-[24px] rounded-xl text-[18px] lg:text-xl font-bold text-[#1DD100]"
-                  >
-                    <img id="seatImg" class="" src="./images/seat-green.png" alt="" />
-                    <p id="total-seat">40 Seats left</p>
-                </div>
+          <div class="hidden md:block h-full">
+            <img class="h-full" src="./images/cupon-devider.png" alt="" />
+          </div>
+          <div class="lg:mr-[40px]">
+            <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
+              New15
+            </h3>
+            <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
+          </div>
+        </div>
+        <div
+          class="w-full bg-[#F78C9C] rounded-3xl px-8 py-8 md:py-0 flex flex-col md:flex-row text-center justify-between items-center">
+          <div class="space-y-1 font-[inter] py-4 border-b-2 border-dashed border-[#f0efef] md:border-0">
+            <h2 class="text-[28px] font-black text-black">20% OFF</h2>
+            <p class="text-black font-semibold text-[20px]">
+              on your next purchase
+            </p>
+            <p class="text-[#636262] font-medium text-[16px]">
+              use by January 2024
+            </p>
+          </div>
+          <div class="hidden md:block h-full ml-[54px]">
+            <img class="h-full" src="./images/cupon-devider.png" alt="" />
+          </div>
+          <div class="">
+            <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
+              Couple20
+            </h3>
+            <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
+          </div>
+        </div>
+      </div>
+      <button id="buy-btn"
+        class="mx-auto flex items-center justify-center whitespace-nowrap text-lg lg:mb-[40px] ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#41b12f00] border border-[#1DD100] hover:bg-[#1cd100d5] text-[#1DD100] hover:text-white font-bold py-[25px] px-[22px] rounded-lg">
+        See All Offers
+      </button>
+    </section>
+    <section id="ticket-section" class="mt-20 bg-[#F7F8F8] border-t-[2px] border-[#1DD100] rounded-t-[88px] py-20">
+      <section class="mx-auto w-4/5">
+        <div class="flex flex-col gap-4 justify-center items-center mb-8">
+          <h2 class="text-center text-[#030712] text-[32px] lg:text-[40px] font-bold">
+            P.H Paribahan
+          </h2>
+          <p class="md:w-3/4 font-[inter] text-[#03071299] font-normal text-[18px] text-center">
+            Travel hassle-free with our convenient bus ticket. Enjoy
+            affordable fares and reliable transportation. Book your journey
+            now!
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row bg-white rounded-3xl p-6 lg:p-8 mb-6">
+          <div class="basis-[75%]">
+            <div class="flex flex-col lg:flex-row gap-4 justify-between mb-6">
+              <div class="flex flex-col lg:flex-row gap-[14px]">
+                <img class="w-[68px] h-[48px]" src="./images/bus-logo.png" alt="" />
+                <div class="flex flex-col -mt-[10px]">
+                  <h2 class="text-[#030712] text-[28px] lg:text-[32px] font-bold">
+                    Greenline Paribahan
+                  </h2>
+                  <p class="text-[#03071299] font-normal font-[inter] text-base lg:text-[18px]">
+                    Coach-009-WEB ! AC_Business
+                  </p>
                 </div>
               </div>
-              <!-- details for booking -->
-              <div class="space-y-4 p-5 lg:p-8 bg-[#F7F8F8] rounded-3xl shadow">
+              <div>
                 <div
-                  class="flex justify-between items-center border-b border-dashed border-gray-300 pb-2"
-                >
-                  <h2 class="text-lg font-semibold">Route</h2>
-                  <span class="text-lg font-medium">Dhaka - Sylhet</span>
-                </div>
-                <div
-                  class="flex justify-between items-center border-b border-dashed border-gray-300 py-2"
-                >
-                  <h2 class="text-lg font-semibold">Departure Time</h2>
-                  <span class="text-lg font-medium">9:00 PM</span>
-                </div>
-                <div
-                  class="flex flex-col lg:flex-row justify-start gap-6 items-center pt-2"
-                >
-                  <button
-                    class="flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded"
-                  >
-                    Boarding Point - Laxmipur</button
-                  ><button
-                    class="flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded"
-                  >
-                    Dropping Point - Bogura</button
-                  ><button
-                    class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded"
-                  >
-                    Est. Time - 11 Hour
-                  </button>
+                  class="flex gap-2 transition-ease-in duration-300 bg-[#1cd10041] w-fit lg:w-full  py-[8px] lg:py-[10px] px-[16px] md:px-[24px] rounded-xl text-[18px] lg:text-xl font-bold text-[#1DD100]">
+                  <img id="seatImg" class="" src="./images/seat-green.png" alt="" />
+                  <p id="total-seat">40 Seats left</p>
                 </div>
               </div>
             </div>
-            <div class="hidden lg:block mx-16 mt-3">
-              <img src="./images/Line 1.png" alt="" />
-            </div>
-            <div
-              class="flex flex-col items-center justify-center py-4 bg-white"
-            >
-              <div class="mb-4 flex h-12 w-12 items-center justify-center">
-                <img src="./images/fare.png" alt="" />
+            <!-- details for booking -->
+            <div class="space-y-4 p-5 lg:p-8 bg-[#F7F8F8] rounded-3xl shadow">
+              <div class="flex justify-between items-center border-b border-dashed border-gray-300 pb-2">
+                <h2 class="text-lg font-semibold">Route</h2>
+                <span class="text-lg font-medium">Dhaka - Sylhet</span>
               </div>
-              <div class="text-4xl text-[#030712] font-bold text-center">
-                550 Taka
+              <div class="flex justify-between items-center border-b border-dashed border-gray-300 py-2">
+                <h2 class="text-lg font-semibold">Departure Time</h2>
+                <span class="text-lg font-medium">9:00 PM</span>
               </div>
-              <div class="text-2xl text-[#03071299] font-semibold mt-1">
-                Per Seat
+              <div class="flex flex-col lg:flex-row justify-start gap-6 items-center pt-2">
+                <button
+                  class="flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded">
+                  Boarding Point - Laxmipur</button><button
+                  class="flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded">
+                  Dropping Point - Bogura</button><button
+                  class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 bg-gray-200 text-sm px-4 py-2 rounded">
+                  Est. Time - 11 Hour
+                </button>
               </div>
             </div>
           </div>
-          <!-- select ticket section  -->
-          <div id=""
-            class="flex flex-col lg:flex-row bg-white rounded-3xl p-6 lg:p-8"
-          >
-            <div
-              class="basis-[60%] pb-6 border-b-[2px] lg:border-b-0 lg:pr-8 lg:border-r-[2px] border-dashed border-[#0307124D]"
-            >
-              <h2 class="text-[24px] font-semibold text-[#030712] mb-6">
-                Select Your Seat
-              </h2>
-              <div
-                class="flex justify-between items-center py-4 border-y border-dashed border-gray-300 pb-2"
-              >
-                <div class="flex gap-1">
-                  <img src="./images/seat-gray.png" alt="" />
-                  <h2 class="text-lg font-semibold">Available</h2>
-                </div>
-                <div class="flex gap-1">
-                  <img src="./images/seat-green-filled.png" alt="" />
-                  <p class="text-lg text-[#1DD100] font-medium">Selected</p>
-                </div>
+          <div class="hidden lg:block mx-16 mt-3">
+            <img src="./images/Line 1.png" alt="" />
+          </div>
+          <div class="flex flex-col items-center justify-center py-4 bg-white">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center">
+              <img src="./images/fare.png" alt="" />
+            </div>
+            <div class="text-4xl text-[#030712] font-bold text-center">
+              550 Taka
+            </div>
+            <div class="text-2xl text-[#03071299] font-semibold mt-1">
+              Per Seat
+            </div>
+          </div>
+        </div>
+        <!-- select ticket section  -->
+        <div id="" class="flex flex-col lg:flex-row bg-white rounded-3xl p-6 lg:p-8">
+          <div
+            class="basis-[60%] pb-6 border-b-[2px] lg:border-b-0 lg:pr-8 lg:border-r-[2px] border-dashed border-[#0307124D]">
+            <h2 class="text-[24px] font-semibold text-[#030712] mb-6">
+              Select Your Seat
+            </h2>
+            <div class="flex justify-between items-center py-4 border-y border-dashed border-gray-300 pb-2">
+              <div class="flex gap-1">
+                <img src="./images/seat-gray.png" alt="" />
+                <h2 class="text-lg font-semibold">Available</h2>
               </div>
-              <!-- gear icon  -->
-              <div class="flex justify-end">
-                <div
-                  class="flex items-center justify-center px-10 py-4 bg-gray-200 rounded-xl my-6"
-                >
-                  <img src="./images/tabler-icon-steering-wheel.png" alt="" />
-                </div>
-              </div>
-              <!-- grid btns  -->
-              <div
-                class="grid grid-cols-5 gap-8 text-[#03071280] font-[inter] text-[18px] font-medium"
-              >
-                <div class="p-2 flex items-center justify-center">A</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  A1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  A2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  A3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  A4
-                </div>
-                <div class="p-2 flex items-center justify-center">B</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  B1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  B2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  B3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  B4
-                </div>
-                <div class="p-2 flex items-center justify-center">C</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  C1
-                </div>
-                <div
-                  class="seat cursor-pointerbg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  C2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  C3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  C4
-                </div>
-                <div class="p-2 flex items-center justify-center">D</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  D1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  D2
-                </div>
-                <div
-                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  D3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  D4
-                </div>
-                <div class="p-2 flex items-center justify-center">E</div>
-                <div
-                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  E1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  E2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  E3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  E4
-                </div>
-                <div class="p-2 flex items-center justify-center">F</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  F1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  F2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  F3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  F4
-                </div>
-                <div class="p-2 flex items-center justify-center">G</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  G1
-                </div>
-                <div
-                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  G2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  G3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  G4
-                </div>
-                <div class="p-2 flex items-center justify-center">H</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  H1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  H2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  H3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  H4
-                </div>
-                <div class="p-2 flex items-center justify-center">I</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  I1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  I2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  I3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  I4
-                </div>
-                <div class="p-2 flex items-center justify-center">J</div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  J1
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  J2
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  J3
-                </div>
-                <div
-                  class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
-                >
-                  J4
-                </div>
+              <div class="flex gap-1">
+                <img src="./images/seat-green-filled.png" alt="" />
+                <p class="text-lg text-[#1DD100] font-medium">Selected</p>
               </div>
             </div>
-            <div class="basis-[40%] lg:ml-8 font-[inter]">
-              <h2
-                class="font-[raleway] text-[24px] font-semibold text-[#030712] pb-6 mb-6 border-b border-dashed border-[#03071233]"
-              >
-                Select Your Seat
-              </h2>
-              <div class="bg-[#F7F8F8] p-6 rounded-xl shadow-md w-full mx-auto mb-8">
-                <div class="relative w-full overflow-auto">
-                  <table class="w-full caption-bottom text-sm">
-                    <thead class="[&amp;_tr]:border-b">
-                      <tr
-                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
-                      >
-                        <th
-                          class="text-[#030712] font-medium text-base h-12 px-4 text-left align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          Seat
-                          <div id="number-of-seat"
-                            class="hidden inline-flex items-center rounded-full whitespace-nowrap border px-2.5 py-0.5 w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-[#1DD100] text-secondary-foreground"
-                          ></div>
-                        </th>
-                        <th
-                          class="text-[#030712] text-base h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          Class
-                        </th>
-                        <th
-                          class="text-[#030712] m text-base h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          Price
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody id="tbody" class="[&amp;_tr:last-child]:border-0">
-                      <!-- <tr id="selected-ticket-container"
+            <!-- gear icon  -->
+            <div class="flex justify-end">
+              <div class="flex items-center justify-center px-10 py-4 bg-gray-200 rounded-xl my-6">
+                <img src="./images/tabler-icon-steering-wheel.png" alt="" />
+              </div>
+            </div>
+            <!-- grid btns  -->
+            <div class="grid grid-cols-5 gap-8 text-[#03071280] font-[inter] text-[18px] font-medium">
+              <div class="p-2 flex items-center justify-center">A</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                A1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                A2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                A3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                A4
+              </div>
+              <div class="p-2 flex items-center justify-center">B</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                B1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                B2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                B3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                B4
+              </div>
+              <div class="p-2 flex items-center justify-center">C</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                C1
+              </div>
+              <div
+                class="seat cursor-pointerbg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                C2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                C3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                C4
+              </div>
+              <div class="p-2 flex items-center justify-center">D</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                D1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                D2
+              </div>
+              <div class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                D3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                D4
+              </div>
+              <div class="p-2 flex items-center justify-center">E</div>
+              <div class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                E1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                E2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                E3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                E4
+              </div>
+              <div class="p-2 flex items-center justify-center">F</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                F1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                F2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                F3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                F4
+              </div>
+              <div class="p-2 flex items-center justify-center">G</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                G1
+              </div>
+              <div class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                G2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                G3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                G4
+              </div>
+              <div class="p-2 flex items-center justify-center">H</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                H1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                H2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                H3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                H4
+              </div>
+              <div class="p-2 flex items-center justify-center">I</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                I1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                I2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                I3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                I4
+              </div>
+              <div class="p-2 flex items-center justify-center">J</div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                J1
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                J2
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                J3
+              </div>
+              <div class="bg-[#F7F8F8] shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer">
+                J4
+              </div>
+            </div>
+          </div>
+          <div class="basis-[40%] lg:ml-8 font-[inter]">
+            <h2
+              class="font-[raleway] text-[24px] font-semibold text-[#030712] pb-6 mb-6 border-b border-dashed border-[#03071233]">
+              Select Your Seat
+            </h2>
+            <div class="bg-[#F7F8F8] p-6 rounded-xl shadow-md w-full mx-auto mb-8">
+              <div class="relative w-full overflow-auto">
+                <table class="w-full caption-bottom text-sm">
+                  <thead class="[&amp;_tr]:border-b">
+                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                      <th
+                        class="text-[#030712] font-medium text-base h-12 px-4 text-left align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                        Seat
+                        <div id="number-of-seat"
+                          class="hidden inline-flex items-center rounded-full whitespace-nowrap border px-2.5 py-0.5 w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-[#1DD100] text-secondary-foreground">
+                        </div>
+                      </th>
+                      <th
+                        class="text-[#030712] text-base h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                        Class
+                      </th>
+                      <th
+                        class="text-[#030712] m text-base h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                        Price
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody" class="[&amp;_tr:last-child]:border-0">
+                    <!-- <tr id="selected-ticket-container"
                         class="transition-colors hover:bg-muted/50 [&amp;:has([role=checkbox])]:pr-0"
                       >
                         <td id="ticket-name"
@@ -637,146 +462,140 @@
                           550
                         </td>
                       </tr> -->
-                    </tbody>
-                  </table>
-                </div>
-                <div class="border-t border-gray-300 my-4"></div>
-                <div class="flex justify-between mb-3">
-                  <div>Total Price</div>
-                  <div id="total-price">BDT 0</div>
-                </div>
-                <div id="discount-container" class="flex justify-between">
-                  <div id="discount-title"></div>
-                  <div id="discount-price"></div>
-                </div>
-                <div id="coupon-container" class="mt-4 flex gap-4">
-                  <input id="coupon-input"
-                    class="w-4/5 flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-2"
-                    placeholder="Have any coupon?"
-                  />
-                  <button id="apply-btn"
-                    class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-white h-10 px-4 py-2 bg-[#1DD100] hover:bg-[#3dc928]"
-                  >
-                    Apply
-                  </button>
-                </div>
-                <div class="mt-5 flex justify-between font-bold">
-                  <div>Grand Total</div>
-                  <div id="grand-total">BDT 0</div>
-                </div>
+                  </tbody>
+                </table>
               </div>
+              <div class="border-t border-gray-300 my-4"></div>
+              <div class="flex justify-between mb-3">
+                <div>Total Price</div>
+                <div id="total-price">BDT 0</div>
+              </div>
+              <div id="discount-container" class="flex justify-between">
+                <div id="discount-title"></div>
+                <div id="discount-price"></div>
+              </div>
+              <div id="coupon-container" class="mt-4 flex gap-4">
+                <input id="coupon-input"
+                  class="w-4/5 flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-2"
+                  placeholder="Have any coupon?" />
+                <button id="apply-btn"
+                  class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-white h-10 px-4 py-2 bg-[#1DD100] hover:bg-[#3dc928]">
+                  Apply
+                </button>
+              </div>
+              <div class="mt-5 flex justify-between font-bold">
+                <div>Grand Total</div>
+                <div id="grand-total">BDT 0</div>
+              </div>
+            </div>
 
-              <div class="w-full mx-auto my-8">
-                <form class="space-y-6">
-                  <div>
-                    <label
-                      for="passenger-name"
-                      class="mb-4 block text-base text-[#030712] font-semibold"
-                    >
-                      Passenger Name*
-                    </label>
-                    <input
-                      class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      id="passenger-name"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      for="phone-number"
-                      class="mb-4 block text-base text-[#030712] font-semibold"
-                    >
-                      Phone Number*
-                    </label>
-                    <input id="phone-input"
-                      class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      id="phone-number"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      for="email-id"
-                      class="mb-4 block text-base text-[#030712] font-semibold"
-                    >
-                      Email ID
-                    </label>
-                    <input
-                      class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      id="email-id"
-                      placeholder="Enter your email id"
-                    />
-                  </div>
-                  <button id="next-btn"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-[16px] text-[20px] font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#00d13b] h-10 px-4 py-[30px] w-full bg-[#1DD100] text-white"
-                  >
-                    Next
-                  </button>
-                </form>
-                <div
-                  class="flex flex-col lg:flex-row justify-around mt-6 text-base text-[#03071299] underline-custom"
-                >
-                  <a class="block" href="#"> Terms and Conditions </a>
-                  <a class="block" href="#"> Cancellation Policy </a>
+            <div class="w-full mx-auto my-8">
+              <form class="space-y-6">
+                <div>
+                  <label for="passenger-name" class="mb-4 block text-base text-[#030712] font-semibold">
+                    Passenger Name*
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="passenger-name" placeholder="Enter your name" />
                 </div>
+                <div>
+                  <label for="phone-number" class="mb-4 block text-base text-[#030712] font-semibold">
+                    Phone Number*
+                  </label>
+                  <input id="phone-input"
+                    class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="phone-number" placeholder="Enter your phone number" />
+                </div>
+                <div>
+                  <label for="email-id" class="mb-4 block text-base text-[#030712] font-semibold">
+                    Email ID
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="email-id" placeholder="Enter your email id" />
+                </div>
+                <button id="next-btn"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-[16px] text-[20px] font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#00d13b] h-10 px-4 py-[30px] w-full bg-[#1DD100] text-white">
+                  Next
+                </button>
+              </form>
+              <div class="flex flex-col lg:flex-row justify-around mt-6 text-base text-[#03071299] underline-custom">
+                <a class="block" href="#"> Terms and Conditions </a>
+                <a class="block" href="#"> Cancellation Policy </a>
               </div>
             </div>
           </div>
-        </section>
-      </section>
-    </main>
-    <footer class="bg-[#030712] text-white py-[50px] lg:py-[120px] w-full">
-      <div class="w-3/4 mx-auto">
-        <div
-          class="flex flex-wrap justify-between items-center border-b border-dashed border-[#FFFFFF4D] pb-8"
-        >
-          <div>
-            <h2 class="text-2xl font-bold">P-Ticket</h2>
-            <p class="mt-2 text-gray-400">
-              P-Ticket is a digital platform to make your <br />
-              daily commuting better.
-            </p>
-          </div>
-          <div class="mt-4 lg:mt-0">
-            <h3 class="text-lg font-semibold">Download our app</h3>
-              <div class="mt-4 cursor-pointer">
-                <img src="./images/Group 104.png" alt="" />
-                </div>
-              </div>
-          </div>
         </div>
-        <div class="flex flex-wrap justify-between items-center pt-4 w-3/4 mx-auto">
-          <p class="text-gray-400 text-sm">
-            © all rights reserved, P-Ticket services limited.2024
-          </p>
-          <div class="flex space-x-4 mt-4 lg:mt-0">
-            <a
-              class="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-              href="#"
-            >
-              Terms &amp; condition
-            </a>
-            <a
-              class="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-              href="#"
-            >
-              Return &amp; refund policy
-            </a>
-            <a
-              class="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-              href="#"
-            >
-              Privacy policy
-            </a>
+      </section>
+    </section>
+    <section id="popup" class="hidden">
+       <div
+        class="fixed inset-0 bg-[#252424a5] bg-opacity-50 overflow-y-auto h-full w-full flex justify-center items-center">
+        <div class="bg-white rounded-2xl shadow-lg max-w-sm mx-auto">
+          <div class="p-[50px]">
+            <div class="flex justify-center">
+              <img class="w-[100px] h-[97px]" src="./images/success.png" alt="">
+            </div>
+            <div class="text-center mt-4">
+              <h3 class="text-[24px] font-bold text-[#27AE60]">SUCCESS</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                <span class="font-medium font-[inter] text-[#4A4A4A]">Thank you for Booking Our Bus Seats.<br>
+                  We are working hard to find the best service and deals for you.<br></span>
+                Shortly you will find a confirmation in your email.
+              </p>
+            </div>
+            <div class="mt-8 flex justify-center">
+              <a href="index.html" id="continue"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-[32px] text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-20 py-2 bg-[#27AE60] hover:bg-[#229c55] text-white">Continue</a>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
+  <footer class="bg-[#030712] text-white py-[50px] lg:py-[120px] w-full">
+    <div class="w-3/4 mx-auto">
+      <div class="flex flex-wrap justify-between items-center border-b border-dashed border-[#FFFFFF4D] pb-8">
+        <div>
+          <h2 class="text-2xl font-bold">P-Ticket</h2>
+          <p class="mt-2 text-gray-400">
+            P-Ticket is a digital platform to make your <br />
+            daily commuting better.
+          </p>
+        </div>
+        <div class="mt-4 lg:mt-0">
+          <h3 class="text-lg font-semibold">Download our app</h3>
+          <div class="mt-4 cursor-pointer">
+            <img src="./images/Group 104.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between items-center pt-4 w-3/4 mx-auto">
+      <p class="text-gray-400 text-sm">
+        © all rights reserved, P-Ticket services limited.2024
+      </p>
+      <div class="flex space-x-4 mt-4 lg:mt-0">
+        <a class="text-gray-400 hover:text-white transition-colors duration-300 text-sm" href="#">
+          Terms &amp; condition
+        </a>
+        <a class="text-gray-400 hover:text-white transition-colors duration-300 text-sm" href="#">
+          Return &amp; refund policy
+        </a>
+        <a class="text-gray-400 hover:text-white transition-colors duration-300 text-sm" href="#">
+          Privacy policy
+        </a>
+      </div>
+    </div>
+    </div>
+  </footer>
 
 
 
 
-    <!-- script  -->
-    <script src="./js/app.js"></script>
-  </body>
+  <!-- script  -->
+  <script src="./js/app.js"></script>
+</body>
+
 </html>

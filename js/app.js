@@ -10,7 +10,7 @@ document.getElementById("buy-btn").addEventListener("click", function (e) {
 //total seat count
 let totalSeatElement = document.getElementById("total-seat");
 let totalSeatCount = parseInt(totalSeatElement.innerText.split(" ")[0]);
-console.log(totalSeatCount)
+console.log(totalSeatCount);
 
 // coupons
 let coupon1 = "NEW15";
@@ -171,3 +171,9 @@ function disableAllSeats() {
     seats[i].classList.add("disabled");
   }
 }
+
+// next button onclick function popup-show
+document.getElementById("next-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.getElementById("popup").classList.remove("hidden");
+});
