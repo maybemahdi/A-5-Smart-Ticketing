@@ -14,7 +14,7 @@ console.log(totalSeatCount);
 
 // coupons
 let coupon1 = "NEW15";
-let coupon2 = "COUPLE20";
+let coupon2 = "Couple 20";
 
 // max seat
 let maxSeat = 5;
@@ -123,7 +123,7 @@ for (let i = 0; i < seats.length; i++) {
           .getElementById("apply-btn")
           .addEventListener("click", function () {
             let couponField = document.getElementById("coupon-input");
-            let couponValue = couponField.value.toUpperCase();
+            let couponValue = couponField.value;
             // 15% discount
             if (couponValue === coupon1) {
               document.getElementById("discount-title").innerText = "Discount";
