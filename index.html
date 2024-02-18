@@ -20,6 +20,11 @@
         text-decoration: underline;
         text-decoration-color: #5e5e5f83;
       }
+      .disabled {
+      opacity: 0.5; 
+      pointer-events: none; 
+}
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -99,6 +104,7 @@
           </button>
         </div>
       </div>
+      <!-- banner-section  -->
       <section
         class="bg-[url('./images/banner.png')] bg-cover bg-center py-20 rounded-3xl my-5"
       >
@@ -112,12 +118,12 @@
               Book now for unbeatable prices and comfortable rides. Limited
               seats available. Don't miss out, reserve your seat today!
             </p>
-            <button
-              id="buy-btn"
+            <a href="#ticket-section"
+              id="buy-btn" 
               class="inline-flex items-center justify-center whitespace-nowrap text-lg lg:mb-[40px] ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#1DD100] hover:bg-green-600 text-[#030712] font-bold py-[25px] px-[25px] rounded-lg"
             >
               Buy Tickets
-            </button>
+          </a>
           </div>
         </div>
       </section>
@@ -191,11 +197,11 @@
             <div class="hidden md:block h-full">
               <img class="h-full" src="./images/cupon-devider.png" alt="" />
             </div>
-            <div class="pl-6">
-              <h3 class="text-[32px] font-bold text-[#030712] uppercase">
+            <div class="lg:mr-[40px]">
+              <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
                 New15
               </h3>
-              <p class="text-[#0307129f] font-light">Coupon Code</p>
+              <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
             </div>
           </div>
           <div
@@ -215,11 +221,11 @@
             <div class="hidden md:block h-full ml-[54px]">
               <img class="h-full" src="./images/cupon-devider.png" alt="" />
             </div>
-            <div class="pl-6">
-              <h3 class="text-[32px] font-bold text-[#030712] uppercase">
+            <div class="">
+              <h3 class="text-[32px] font-bold text-[#030712] uppercase text-center">
                 Couple20
               </h3>
-              <p class="text-[#0307129f] font-light">Coupon Code</p>
+              <p class="text-[#0307129f] font-light text-center">Coupon Code</p>
             </div>
           </div>
         </div>
@@ -230,7 +236,7 @@
           See All Offers
         </button>
       </section>
-      <section
+      <section id="ticket-section"
         class="mt-20 bg-[#F7F8F8] border-t-[2px] border-[#1DD100] rounded-t-[88px] py-20"
       >
         <section class="mx-auto w-4/5">
@@ -333,7 +339,7 @@
             </div>
           </div>
           <!-- select ticket section  -->
-          <div
+          <div id=""
             class="flex flex-col lg:flex-row bg-white rounded-3xl p-6 lg:p-8"
           >
             <div
@@ -441,7 +447,7 @@
                   D2
                 </div>
                 <div
-                  class="bg-[#1DD100] text-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
+                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
                 >
                   D3
                 </div>
@@ -452,7 +458,7 @@
                 </div>
                 <div class="p-2 flex items-center justify-center">E</div>
                 <div
-                  class="bg-[#1DD100] text-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
+                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
                 >
                   E1
                 </div>
@@ -499,7 +505,7 @@
                   G1
                 </div>
                 <div
-                  class="bg-[#1DD100] text-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
+                  class="bg-white shadow rounded-lg p-4 flex items-center justify-center seat cursor-pointer"
                 >
                   G2
                 </div>
@@ -578,13 +584,13 @@
                 </div>
               </div>
             </div>
-            <div class="basis-[40%] mt-8 lg:ml-8 font-[inter]">
+            <div class="basis-[40%] lg:ml-8 font-[inter]">
               <h2
                 class="text-[24px] font-semibold text-[#030712] pb-6 mb-6 border-b border-dashed border-[#03071233]"
               >
                 Select Your Seat
               </h2>
-              <div class="bg-[#F7F8F8] p-6 rounded-xl shadow-md w-full mx-auto">
+              <div class="bg-[#F7F8F8] p-6 rounded-xl shadow-md w-full mx-auto mb-8">
                 <div class="relative w-full overflow-auto">
                   <table class="w-full caption-bottom text-sm">
                     <thead class="[&amp;_tr]:border-b">
@@ -595,7 +601,7 @@
                           class="text-[#030712] font-medium text-base h-12 px-4 text-left align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
                         >
                           Seat
-                          <div
+                          <div id="number-of-seat"
                             class="hidden inline-flex items-center rounded-full whitespace-nowrap border px-2.5 py-0.5 w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-[#1DD100] text-secondary-foreground"
                           ></div>
                         </th>
@@ -611,59 +617,44 @@
                         </th>
                       </tr>
                     </thead>
-                    <tbody class="[&amp;_tr:last-child]:border-0">
-                      <tr
-                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                    <tbody id="tbody" class="[&amp;_tr:last-child]:border-0">
+                      <!-- <tr id="selected-ticket-container"
+                        class="transition-colors hover:bg-muted/50 [&amp;:has([role=checkbox])]:pr-0"
                       >
-                        <td
+                        <td id="ticket-name"
                           class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
                         >
-                          C2
+                          
                         </td>
-                        <td
-                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        <td id="ticket-class"
+                          class="hidden p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
                         >
                           Economy
                         </td>
-                        <td
-                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        <td id="ticket-price"
+                          class="hidden p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
                         >
                           550
                         </td>
-                      </tr>
-                      <tr
-                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
-                      >
-                        <td
-                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          C2
-                        </td>
-                        <td
-                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          Economy
-                        </td>
-                        <td
-                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
-                        >
-                          550
-                        </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
                 </div>
                 <div class="border-t border-gray-300 my-4"></div>
                 <div class="flex justify-between">
                   <div>Total Price</div>
-                  <div>BDT 1100</div>
+                  <div id="total-price">BDT 0</div>
+                </div>
+                <div class="flex justify-between">
+                  <div id="discount-title"></div>
+                  <div id="discount-price"></div>
                 </div>
                 <div class="mt-4 flex gap-4">
                   <input
                     class="w-4/5 flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-2"
                     placeholder="Have any coupon?"
                   />
-                  <button
+                  <button id="apply-btn"
                     class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-white h-10 px-4 py-2 bg-[#1DD100] hover:bg-[#3dc928]"
                   >
                     Apply
@@ -671,7 +662,7 @@
                 </div>
                 <div class="mt-5 flex justify-between font-bold">
                   <div>Grand Total</div>
-                  <div>BDT 1100</div>
+                  <div id="grand-total">BDT 0</div>
                 </div>
               </div>
 
@@ -697,7 +688,7 @@
                     >
                       Phone Number*
                     </label>
-                    <input
+                    <input id="phone-input"
                       class="flex h-10 w-full rounded-md border border-input bg-background p-[30px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       id="phone-number"
                       placeholder="Enter your phone number"
@@ -716,7 +707,7 @@
                       placeholder="Enter your email id"
                     />
                   </div>
-                  <button
+                  <button id="next-btn"
                     class="inline-flex items-center justify-center whitespace-nowrap rounded-[16px] text-[20px] font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#00d13b] h-10 px-4 py-[30px] w-full bg-[#1DD100] text-white"
                   >
                     Next
@@ -781,5 +772,11 @@
         </div>
       </div>
     </footer>
+
+
+
+
+    <!-- script  -->
+    <script src="./js/app.js"></script>
   </body>
 </html>
