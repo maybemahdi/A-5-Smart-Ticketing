@@ -10,7 +10,6 @@ document.getElementById("buy-btn").addEventListener("click", function (e) {
 //total seat count
 let totalSeatElement = document.getElementById("total-seat");
 let totalSeatCount = parseInt(totalSeatElement.innerText.split(" ")[0]);
-console.log(totalSeatCount);
 
 // coupons
 let coupon1 = "NEW15";
