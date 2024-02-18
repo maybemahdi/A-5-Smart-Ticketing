@@ -279,13 +279,13 @@
                   </div>
                 </div>
                 <div>
-                  <button
-                    id="total-seat"
-                    class="transition-ease-in duration-300 bg-[#1cd10041] w-full md:block py-[7px] lg:py-[8px] px-[16px] md:px-[24px] rounded-md text-[18px] lg:text-xl font-bold text-[#1DD100]"
+                  <div
+                    
+                    class="flex gap-2 transition-ease-in duration-300 bg-[#1cd10041] w-fit lg:w-full  py-[8px] lg:py-[10px] px-[16px] md:px-[24px] rounded-xl text-[18px] lg:text-xl font-bold text-[#1DD100]"
                   >
-                    <img class="inline" src="./images/seat-green.png" alt="" />
-                    40 Seats left
-                  </button>
+                    <img id="seatImg" class="" src="./images/seat-green.png" alt="" />
+                    <p id="total-seat">40 Seats left</p>
+                </div>
                 </div>
               </div>
               <!-- details for booking -->
@@ -586,7 +586,7 @@
             </div>
             <div class="basis-[40%] lg:ml-8 font-[inter]">
               <h2
-                class="text-[24px] font-semibold text-[#030712] pb-6 mb-6 border-b border-dashed border-[#03071233]"
+                class="font-[raleway] text-[24px] font-semibold text-[#030712] pb-6 mb-6 border-b border-dashed border-[#03071233]"
               >
                 Select Your Seat
               </h2>
@@ -641,16 +641,16 @@
                   </table>
                 </div>
                 <div class="border-t border-gray-300 my-4"></div>
-                <div class="flex justify-between">
+                <div class="flex justify-between mb-3">
                   <div>Total Price</div>
                   <div id="total-price">BDT 0</div>
                 </div>
-                <div class="flex justify-between">
+                <div id="discount-container" class="flex justify-between">
                   <div id="discount-title"></div>
                   <div id="discount-price"></div>
                 </div>
-                <div class="mt-4 flex gap-4">
-                  <input
+                <div id="coupon-container" class="mt-4 flex gap-4">
+                  <input id="coupon-input"
                     class="w-4/5 flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-2"
                     placeholder="Have any coupon?"
                   />

@@ -7,10 +7,17 @@ document.getElementById("buy-btn").addEventListener("click", function (e) {
   });
 });
 
+//total seat count
+let totalSeatElement = document.getElementById("total-seat");
+let totalSeatCount = parseInt(totalSeatElement.innerText.split(" ")[0]);
+console.log(totalSeatCount)
+
+// coupons
+let coupon1 = "NEW15";
+let coupon2 = "COUPLE20";
+
 // max seat
 let maxSeat = 5;
-
-// seat selection function
 
 //disable button-apply
 let applyButton = document.getElementById("apply-btn");
@@ -39,6 +46,10 @@ for (let i = 0; i < seats.length; i++) {
       seatElement.classList.remove("hidden");
       seatElement.innerText = count;
       count++;
+
+      // update seats left count
+      totalSeatCount--;
+      totalSeatElement.innerText = totalSeatCount + " Seats left";
 
       //show selected ticket
       let tBody = document.getElementById("tbody");
@@ -88,6 +99,12 @@ for (let i = 0; i < seats.length; i++) {
       totalPriceText = totalPrice;
       totalPriceShowElement.innerText = "BDT " + totalPrice;
 
+      //show grand total price
+      let discount = 0;
+      let grandTotalPriceElement = document.getElementById("grand-total");
+      let grandTotalPriceText = totalPrice - discount;
+      grandTotalPriceElement.innerText = "BDT " + grandTotalPriceText;
+
       //   validate phone number
       phoneInput.addEventListener("input", function () {
         const phoneNumber = phoneInput.value.trim();
@@ -102,6 +119,47 @@ for (let i = 0; i < seats.length; i++) {
       if (count === maxSeat) {
         applyButton.disabled = false;
         disableAllSeats();
+        document
+          .getElementById("apply-btn")
+          .addEventListener("click", function () {
+            let couponField = document.getElementById("coupon-input");
+            let couponValue = couponField.value.toUpperCase();
+            // 15% discount
+            if (couponValue === coupon1) {
+              document.getElementById("discount-title").innerText = "Discount";
+              let discountElement = document.getElementById("discount-price");
+              let discount = (totalPrice * 15) / 100;
+              discountElement.innerText = "BDT" + discount.toFixed(2);
+
+              //show grand total price
+              let grandTotalPriceElement =
+                document.getElementById("grand-total");
+              let grandTotalPriceText = totalPrice - discount;
+              grandTotalPriceElement.innerText = "BDT " + grandTotalPriceText;
+              document
+                .getElementById("coupon-container")
+                .classList.add("hidden");
+            }
+            // 20% discount
+            else if (couponValue === coupon2) {
+              document.getElementById("discount-title").innerText = "Discount";
+              let discountElement = document.getElementById("discount-price");
+              let discount = (totalPrice * 20) / 100;
+              discountElement.innerText = "BDT" + discount.toFixed(2);
+
+              //show grand total price
+              let grandTotalPriceElement =
+                document.getElementById("grand-total");
+              let grandTotalPriceText = totalPrice - discount;
+              grandTotalPriceElement.innerText = "BDT " + grandTotalPriceText;
+              document
+                .getElementById("coupon-container")
+                .classList.add("hidden");
+            } else {
+              alert("Invalid Coupon Code");
+              document.getElementById("coupon-input").value = "";
+            }
+          });
       }
     }
   });
