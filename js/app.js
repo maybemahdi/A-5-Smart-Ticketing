@@ -144,7 +144,7 @@ for (let i = 0; i < seats.length; i++) {
               document.getElementById("discount-title").innerText = "Discount";
               let discountElement = document.getElementById("discount-price");
               let discount = (totalPrice * 20) / 100;
-              discountElement.innerText = "BDT" + discount.toFixed(2);
+              discountElement.innerText = "BDT " + discount.toFixed(2);
 
               //show grand total price
               let grandTotalPriceElement =
